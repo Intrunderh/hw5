@@ -4,3 +4,13 @@
 # 2 2
 # 4
 
+def sum(a, b):
+    if a:
+        return 1 + sum(a - 1, b)
+    elif b:
+        return 1 + sum(a, b - 1)
+    return 0
+
+a = int(input('Введите число a: '))
+b = int(input('Введите число b: '))
+print(f'Сумма двух целых = {sum(a, b)}')
